@@ -4,7 +4,11 @@
       "Bash(mkdir:*)",
       "Bash(npm run build:*)",
       "Bash(timeout 300 npm run build)",
-      "Bash(NODE_ENV=production npm run build)"
+      "Bash(NODE_ENV=production npm run build)",
+      "WebFetch(domain:jchoischunglaw.github.io)",
+      "Bash(gh workflow:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
