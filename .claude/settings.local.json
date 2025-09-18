@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout 300 npm run build)",
+      "Bash(NODE_ENV=production npm run build)"
+    ],
+    "deny": []
+  }
+}
