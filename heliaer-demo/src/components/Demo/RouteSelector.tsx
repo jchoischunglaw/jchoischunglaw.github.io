@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Users, Calendar, Clock } from 'lucide-react';
 import Button from '../UI/Button';
 import Card from '../UI/Card';
+import { getAssetPath } from '../../utils/assets';
 import type { SearchCriteria } from '../../types';
 import { MOCK_LOCATIONS, PASSENGER_OPTIONS, TIME_SLOTS, DEFAULT_SEARCH_CRITERIA } from '../../data/mockData';
 
@@ -46,7 +47,7 @@ const RouteSelector: React.FC<RouteSelectorProps> = ({ onSearch, loading = false
       {/* Hero Section */}
       <div className="text-center mb-12">
         <motion.img
-          src="/images/logos/HeliaerLogo_wFont.png"
+          src={getAssetPath("images/logos/HeliaerLogo_wFont.png")}
           alt="HeliAer"
           className="h-16 md:h-20 w-auto mx-auto mb-6"
           initial={{ scale: 0.8, opacity: 0 }}

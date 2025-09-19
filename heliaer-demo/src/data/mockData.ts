@@ -1,4 +1,5 @@
 import type { HelicopterOption, Location, Route, MatchingStep } from '../types';
+import { getAssetPath } from '../utils/assets';
 
 export const MOCK_LOCATIONS: Location[] = [
   {
@@ -50,7 +51,7 @@ export const MOCK_HELICOPTERS: HelicopterOption[] = [
     helicopter: {
       model: "Bell 407",
       capacity: 6,
-      photo: "/images/helicopters/Bell 407.png",
+      photo: getAssetPath("images/helicopters/Bell 407.png"),
       year: 2019,
       maxRange: 694,
       cruiseSpeed: 246
@@ -75,7 +76,7 @@ export const MOCK_HELICOPTERS: HelicopterOption[] = [
     helicopter: {
       model: "Airbus H125",
       capacity: 5,
-      photo: "/images/helicopters/Airbus H125.png",
+      photo: getAssetPath("images/helicopters/Airbus H125.png"),
       year: 2020,
       maxRange: 610,
       cruiseSpeed: 224
@@ -100,7 +101,7 @@ export const MOCK_HELICOPTERS: HelicopterOption[] = [
     helicopter: {
       model: "Robinson R66",
       capacity: 4,
-      photo: "/images/helicopters/Robinson R66.png",
+      photo: getAssetPath("images/helicopters/Robinson R66.png"),
       year: 2021,
       maxRange: 648,
       cruiseSpeed: 259

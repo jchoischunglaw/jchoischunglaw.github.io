@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { User, ChevronDown, LogOut, Settings, Plane } from 'lucide-react';
 import type { User as UserType } from '../../types';
+import { getAssetPath } from '../../utils/assets';
 
 interface HeaderProps {
   user?: UserType | null;
@@ -49,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ user, onLogout, onAuthClick }) => {
           transition={{ duration: 0.2 }}
         >
           <img
-            src="/images/logos/HeliaerLogo_wFont.png"
+            src={getAssetPath("images/logos/HeliaerLogo_wFont.png")}
             alt="HeliAer - AI Helicopter Matching"
             className="h-8 md:h-10 w-auto"
           />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getAssetPath } from '../../utils/assets';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -69,7 +70,7 @@ export const LogoSpinner: React.FC<LogoSpinnerProps> = ({
         transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
       >
         <img
-          src="/images/logos/heliaer-logo-light.png"
+          src={getAssetPath("images/logos/heliaer-logo-light.png")}
           alt="HeliAer"
           className={sizes[size]}
         />

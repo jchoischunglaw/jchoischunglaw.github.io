@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Eye, EyeOff, AlertCircle } from 'lucide-react';
 import Button from '../UI/Button';
 import type { LoginFormData } from '../../types';
+import { getAssetPath } from '../../utils/assets';
 
 interface LoginProps {
   onLogin: (formData: LoginFormData) => Promise<void>;
@@ -94,7 +95,7 @@ export default function Login({ onLogin, onSwitchToSignUp, onForgotPassword, isL
         {/* Logo and Header */}
         <div className="text-center mb-8">
           <motion.img
-            src="/images/logos/heliaer-logo-light.png"
+            src={getAssetPath("images/logos/heliaer-logo-light.png")}
             alt="HeliAer"
             className="h-12 w-auto mx-auto mb-6"
             initial={{ scale: 0.8, opacity: 0 }}
