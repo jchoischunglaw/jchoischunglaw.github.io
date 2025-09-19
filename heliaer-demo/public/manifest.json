@@ -1,0 +1,21 @@
+{
+  "name": "HeliAer - AI Helicopter Matching",
+  "short_name": "HeliAer",
+  "description": "Revolutionary AI-powered helicopter matching service",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/images/logos/heliaer-logo-light.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logos/heliaer-logo-light.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

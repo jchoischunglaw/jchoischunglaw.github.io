@@ -21,31 +21,50 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: lab2dent/package-lock.json
-          
-      - name: Install dependencies
+          cache-dependency-path: |
+            lab2dent/package-lock.json
+            heliaer-demo/package-lock.json
+
+      - name: Install lab2dent dependencies
         run: |
           cd lab2dent
           npm ci
-          
-      - name: Build
+
+      - name: Build lab2dent
         run: |
           cd lab2dent
           npm run build
-          
+
+      - name: Install heliaer-demo dependencies
+        run: |
+          cd heliaer-demo
+          npm ci
+
+      - name: Build heliaer-demo
+        run: |
+          cd heliaer-demo
+          npm run build
+
+      - name: Combine builds
+        run: |
+          mkdir -p _site
+          cp -r lab2dent/out/* _site/
+          mkdir -p _site/heliaer
+          cp -r heliaer-demo/dist/* _site/heliaer/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: lab2dent/out
+          path: _site
 
   deploy:
     environment:
